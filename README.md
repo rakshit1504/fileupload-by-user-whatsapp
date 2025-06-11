@@ -125,11 +125,11 @@ Create a .env file in the root and add all required variables as described above
 
 ## File Structure
 .
-├── server.js               # Main Express app
-├── uploadToSupabase.js    # File upload logic for Supabase
-├── supabase.js
-├── package.json
-└── .env                   # Environment variables (not checked into repo)
+├── server.js               # Main Express app  
+├── uploadToSupabase.js    # File upload logic for Supabase  
+├── supabase.js  
+├── package.json  
+└── .env                   # Environment variables (not checked into repo)  
 
 ## Notable Implementation Details
 
