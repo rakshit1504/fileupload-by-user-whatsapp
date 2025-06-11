@@ -5,7 +5,6 @@ This project implements a fully automated WhatsApp bot that guides users through
 ## 📌 Project Overview
 
 The bot is capable of:
-
 - Initiating a conversation via WhatsApp message
 - Dynamically handling button-based user replies
 - Requesting course details (like B.Tech, M.Tech)
@@ -15,9 +14,37 @@ The bot is capable of:
 
 The solution is deployed as a Node.js Express server and uses the official Meta Graph API to interact with WhatsApp.
 
+## 🏗️ Architecture & Tech Stack
+
+- **Node.js + Express** — Web server and message processing
+- **Supabase** — Used for:
+  - File storage (`certificates/`)
+  - Postgres database with RLS-enabled `user_certificates` table
+- **WhatsApp Business API (Cloud API)** — Messaging platform
+- **Axios** — API calls to WhatsApp and Supabase
+- **UUID + `gen_random_uuid()`** — For consistent primary key generation in Postgres
+
+
+## 🔁 Message Flow
+
+1. User sends **"hi"**  
+2. Bot replies with a **graduation template**, asking if the user has completed graduation.  
+3. User clicks **"Yes"**  
+4. Bot replies with a **degree template**, asking for course type (e.g., *B.Tech*).  
+5. User clicks course type  
+6. Bot replies:  
+   > "Thank you! please provide certificate in PDF form"  
+7. User sends the **PDF file**  
+8. Server downloads the file via Meta API  
+9. File is saved to **Supabase Storage** in the path:  
+ certificates/<phone_number>/<timestamp>_<filename>.pdf  
+10. Metadata including phone, file URL, and timestamp is inserted into the `user_certificates` table in Supabase  
+11. Bot sends a **success message** with a **public link** to the uploaded certificate
+
+
+
+
 ---
-
-
 
 ### 🧪 Bot Interaction Flow
 
@@ -56,15 +83,6 @@ A full video demo along with all screenshots is available in this Drive folder:
 ---
 
 
-## 🏗️ Architecture & Tech Stack
-
-- **Node.js + Express** — Web server and message processing
-- **Supabase** — Used for:
-  - File storage (`certificates/`)
-  - Postgres database with RLS-enabled `user_certificates` table
-- **WhatsApp Business API (Cloud API)** — Messaging platform
-- **Axios** — API calls to WhatsApp and Supabase
-- **UUID + `gen_random_uuid()`** — For consistent primary key generation in Postgres
 
 
 ## 📂 Database Schema
@@ -82,23 +100,7 @@ create table public.user_certificates (
 
 ```
 
-## 🔁 Message Flow
 
-1. User sends **"hi"**  
-2. Bot replies with a **graduation template**, asking if the user has completed graduation.  
-3. User clicks **"Yes"**  
-4. Bot replies with a **degree template**, asking for course type (e.g., *B.Tech*).  
-5. User clicks course type  
-6. Bot replies:  
-   > "Thank you! please provide certificate in PDF form"  
-7. User sends the **PDF file**  
-8. Server downloads the file via Meta API  
-9. File is saved to **Supabase Storage** in the path:  
- certificates/<phone_number>/<timestamp>_<filename>.pdf  
-10. Metadata including phone, file URL, and timestamp is inserted into the `user_certificates` table in Supabase  
-11. Bot sends a **success message** with a **public link** to the uploaded certificate
-
----
 
 ## 🔐 Environment Variables
 
@@ -124,12 +126,14 @@ Create a .env file in the root and add all required variables as described above
  Make sure this server is accessible by your WhatsApp webhook (via HTTPS) — use ngrok for local development.
 
 ## File Structure
-.
+.  
 ├── server.js               # Main Express app  
 ├── uploadToSupabase.js    # File upload logic for Supabase  
 ├── supabase.js  
 ├── package.json  
-└── .env                   # Environment variables (not checked into repo)  
+└── .env                   # Environment variables (not checked into repo)
+
+---
 
 ## Notable Implementation Details
 
