@@ -84,7 +84,6 @@ A full video demo along with all screenshots is available in this Drive folder:
 
 
 
-
 ## 📂 Database Schema
 
 Postgres table in Supabase:
