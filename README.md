@@ -79,6 +79,7 @@ Uploaded certificate record successfully stored with UUID and timestamp.
 
 A full video demo along with all screenshots is available in this Drive folder:  
 👉 [View Demo and Assets](https://drive.google.com/drive/folders/1Wc9SxgNWbBNpbqUx1CTXwPtVCzYXqQNw?usp=sharing)
+👉 [View Demo Video](https://drive.google.com/file/d/1jEYmwRRsL2F3vav7Z149H22CiY5U6zKH/view?usp=sharing)
 
 ---
 
