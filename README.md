@@ -51,27 +51,29 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 The bot replies with a template asking if the user has a graduation certificate.
 #### 2. User selects "Yes" and chooses degree
 User selects "Yes" > "B.Tech" via interactive buttons.
-![Greeting Template and Degree Selection](./screenshots/01_greeting_template.png)
+![Greeting Template and Degree Selection](./screenshots/ss1.jpg)
+![Greeting Template and Degree Selection](./screenshots/ss2.jpg)
 
 
 #### 3. Bot prompts for certificate upload
 Bot asks the user to upload a PDF certificate.
 
-![Certificate Upload Prompt](./screenshots/03_upload_certificate.png)
+![Certificate Upload Prompt](./screenshots/ss3.jpg)
+![Greeting Template and Degree Selection](./screenshots/ss4.jpg)
 
 
 ### 🧾 Server Logs
 
 Logs showing the entire flow and successful saving of PDF.
 
-![Console Logs](./screenshots/04_logs_console.png)
+![Console Logs](./screenshots/ss5.jpg)
 
 
 ### 📊 Supabase Table
 
 Uploaded certificate record successfully stored with UUID and timestamp.
 
-![Supabase Table](./screenshots/05_supabase_table.png)
+![Supabase Table](./screenshots/ss6.jpg)
 
 
 ### 🎥 Demo & Full Assets
