@@ -56,6 +56,12 @@ Bot asks the user to upload a PDF certificate.
 
 ![Certificate Upload Prompt](./screenshots/ss6.jpg)
 
+#### 3. If User selects "No" -> Type highest education -> Bot prompts for certificate upload 
+User selects "No" > "B.Tech" via interactive buttons.   
+Bot asks the user to give highest education.  
+Bot acknowledges the message by the user and asks the user to upload a PDF certificate.
+![user types No](./screenshots/ss7.jpg)
+
 
 
 
