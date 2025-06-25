@@ -50,30 +50,30 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 #### 1. User sends a greeting
 The bot replies with a template asking if the user has a graduation certificate.
 ![Greeting Template and Degree Selection](./screenshots/ss5.jpg)  
-#### 2. User selects "Yes" and chooses degree
-User selects "Yes" > "B.Tech" via interactive buttons.
+#### 2. User selects "Yes" and chooses degree -> Bot prompts for certificate upload
+User selects "Yes" > "B.Tech" via interactive buttons.  
+Bot asks the user to upload a PDF certificate.
+
 ![Certificate Upload Prompt](./screenshots/ss6.jpg)
 
 
-#### 3. Bot prompts for certificate upload
-Bot asks the user to upload a PDF certificate.
-
-![Certificate Upload Prompt](./screenshots/ss3.jpg)
-![Greeting Template and Degree Selection](./screenshots/ss4.jpg)
 
 
 ### 🧾 Server Logs
 
 Logs showing the entire flow and successful saving of PDF.
 
-![Console Logs](./screenshots/ss5.jpg)
+![Console Logs](./screenshots/ss1.jpg)
+![Console Logs](./screenshots/ss2.jpg)
+
 
 
 ### 📊 Supabase Table
 
 Uploaded certificate record successfully stored with UUID and timestamp.
 
-![Supabase Table](./screenshots/ss6.jpg)
+![Supabase Table](./screenshots/ss3.jpg)
+![Supabase Table](./screenshots/ss4.jpg)
 
 
 ### 🎥 Demo & Full Assets
