@@ -51,7 +51,7 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 The bot replies with a template asking if the user has a graduation certificate.
 ![Greeting Template and Degree Selection](./screenshots/ss5.jpg)  
 #### 2. User selects "Yes" and chooses degree -> Bot prompts for certificate upload
-User selects "Yes" > "B.Tech" via interactive buttons.  
+User selects "Yes" > "BBA" via interactive buttons.  
 Bot asks the user to upload a PDF certificate.
 
 ![Certificate Upload Prompt](./screenshots/ss6.jpg)
