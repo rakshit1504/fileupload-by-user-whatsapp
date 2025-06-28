@@ -39,10 +39,7 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 9. File is saved to **Supabase Storage** in the path:  
  certificates/<phone_number>/<timestamp>_<filename>.pdf  
 10. Metadata including phone, file URL, and timestamp is inserted into the `user_certificates` table in Supabase  
-11. Bot sends a **success message** with a **public link** to the uploaded certificate
-
-
-
+11. Bot sends a **success message** with a **public link** to the uploaded certificate  
 
 ---
 
