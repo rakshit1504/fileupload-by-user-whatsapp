@@ -107,8 +107,6 @@ create table public.user_certificates (
 
 ```
 
-
-
 ## 🔐 Environment Variables
 
 The following environment variables must be set in a `.env` file for the server to function properly:
