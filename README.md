@@ -2,8 +2,8 @@
 
 This project implements a fully automated WhatsApp bot that guides users through a certificate submission workflow. It uses the WhatsApp Business Cloud API, Express.js, and Supabase to manage a conversational flow, accept PDF uploads, and store them securely along with metadata.
 
-## 📌 Project Overview
 
+## 📌 Project Overview
 The bot is capable of:
 - Initiating a conversation via WhatsApp message
 - Dynamically handling button-based user replies
