@@ -77,7 +77,6 @@ Uploaded certificate record successfully stored with UUID and timestamp.
 ![Supabase Table](./screenshots/ss3.jpg)
 ![Supabase Table](./screenshots/ss4.jpg)
 
-
 ### 🎥 Demo & Full Assets
 
 A full video demo along with all screenshots is available in this Drive folder:  
