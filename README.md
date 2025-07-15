@@ -12,7 +12,7 @@ The bot is capable of:
 
 The solution is deployed as a Node.js Express server and uses the official Meta Graph API to interact with WhatsApp.
 
-## 🏗️ Architecture & Tech Stack
+##  Architecture & Tech Stack
 
 - **Node.js + Express** — Web server and message processing
 - **Supabase** — Used for:
@@ -23,7 +23,7 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 - **UUID + `gen_random_uuid()`** — For consistent primary key generation in Postgres
 
 
-## 🔁 Message Flow
+##  Message Flow
 
 1. User sends **"hi"**  
 2. Bot replies with a **graduation template**, asking if the user has completed graduation.  
@@ -41,7 +41,7 @@ The solution is deployed as a Node.js Express server and uses the official Meta 
 
 ---
 
-### 🧪 Bot Interaction Flow
+###  Bot Interaction Flow
 
 #### 1. User sends a greeting
 The bot replies with a template asking if the user has a graduation certificate.
@@ -61,7 +61,7 @@ Bot acknowledges the message by the user and asks the user to upload a PDF certi
 
 
 
-### 🧾 Server Logs
+###  Server Logs
 
 Logs showing the entire flow and successful saving of PDF.
 
@@ -70,24 +70,24 @@ Logs showing the entire flow and successful saving of PDF.
 
 
 
-### 📊 Supabase Table
+###  Supabase Table
 
 Uploaded certificate record successfully stored with UUID and timestamp.
 
 ![Supabase Table](./screenshots/ss3.jpg)
 ![Supabase Table](./screenshots/ss4.jpg)
 
-### 🎥 Demo & Full Assets
+###  Demo & Full Assets
 
 A full video demo along with all screenshots is available in this Drive folder:  
 👉 [View Demo and Assets](https://drive.google.com/drive/folders/1Wc9SxgNWbBNpbqUx1CTXwPtVCzYXqQNw?usp=sharing)
-👉 [View Demo Video](https://drive.google.com/file/d/1jEYmwRRsL2F3vav7Z149H22CiY5U6zKH/view?usp=sharing)
+👉 [View Demo Video](https://drive.google.com/file/d/11A0N2wPsfDrNU4TAuV0neRGUhVBOapCw/view?usp=sharing)
 
 ---
 
 
 
-## 📂 Database Schema
+##  Database Schema
 
 Postgres table in Supabase:
 
@@ -102,7 +102,7 @@ create table public.user_certificates (
 
 ```
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 The following environment variables must be set in a `.env` file for the server to function properly:
 
